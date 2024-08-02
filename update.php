@@ -18,8 +18,6 @@ if(mysqli_num_rows($result) >0){
  else{
    echo json_encode(array('message' => 'No record found', 'status'=>'false'));
  }
- error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 
 ?>
