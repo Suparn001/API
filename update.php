@@ -6,7 +6,7 @@ include "connection.php";
 $jon =json_decode(file_get_contents("php://input"),true);
 
 $od=$jon['sid'];
-$id  = "Insert * from `API`.`contacts` ";
+$id  = "Update * from `API`.`contacts` where `id` = {$od}";
 $result= mysqli_query($con, $id) or die("query failed");
 
 if(mysqli_num_rows($result) >0){
